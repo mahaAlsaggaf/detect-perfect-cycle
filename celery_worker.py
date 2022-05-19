@@ -14,7 +14,6 @@ def hasPerfectCycles(lists):
         visitedNodes = lists[list][:]
         lengthOfTheList = len(lists[list])
 
-
         if(lengthOfTheList == 0):
             lists[list] = False
         elif(lengthOfTheList == 1):
@@ -27,7 +26,6 @@ def hasPerfectCycles(lists):
             slowPointer = lists[list][0] 
 
             beginningOfTheListElement = lists[list][0] 
-
 
             while(fastPointer < lengthOfTheList):
                 
@@ -69,17 +67,4 @@ def hasPerfectCycles(lists):
                 else:
                     lists[list] = False
 
-
-
-# lastVisitedElementPointer = lists[list][slowPointer]
-#                     print("lastVisitedElementPointer = ", lastVisitedElementPointer)
-#                     lastVisitedElement = lists[list][lastVisitedElementPointer] 
-#                     print("lastVisitedElement = ", lastVisitedElement)
-
-#                     visitedNodes[lastVisitedElementPointer] = True
-
-#                     if( lastVisitedElementPointer == beginningOfTheListElement):
-#                         print("The last element to be visited takes you back to position zero")
-#                         print("back to the beginning of the list")
-#                         lists[list] = True
     return lists
